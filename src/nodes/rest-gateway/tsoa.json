@@ -1,0 +1,32 @@
+{
+  "swagger": {
+    "outputDirectory": "./src/nodes/rest-gateway/swagger/",
+    "entryFile": "./src/nodes/rest-gateway/app.ts",
+    "basePath": "/",
+    "noImplicitAdditionalProperties": "silently-remove-extras",
+    "securityDefinitions": {
+      "jwt": {
+        "type": "apiKey",
+        "name": "x-access-token",
+        "in": "header"
+      }
+    },
+    "yaml": false,
+    "specVersion": 3
+  },
+  "routes": {
+    "basePath": "/",
+    "entryFile": "./src/nodes/rest-gateway/app.ts",
+    "routesDir": "./src/nodes/rest-gateway/",
+    "authenticationModule": "./src/nodes/rest-gateway/middleware/authentication.ts",
+    "middleware": "express"
+  },
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "src/*": [
+        "src/*"
+      ]
+    }
+  }
+}

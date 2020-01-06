@@ -6,8 +6,8 @@ const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: {
-    /** ACCOUNTS */
-    'accounts/accounts.service': './src/nodes/users/services/accounts/accounts.service.ts',
+    /** USERS */
+    'users/accounts.service': './src/nodes/users/services/accounts/accounts.service.ts',
 
     /** REST */
     // eslint-disable-next-line
