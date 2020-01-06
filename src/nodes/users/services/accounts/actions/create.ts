@@ -1,12 +1,21 @@
-import { Context } from 'moleculer';
+import { Context, Action } from 'moleculer';
+import { Account } from '../account.model';
 
-export const create = {
+export interface CreateParams {
+  phone: string;
+  password: string;
+  firstName?: string;
+  secondName?: string;
+  lastName?: string;
+}
+
+export const create: Action = {
   params: {},
 
-  async handler(ctx: Context) {
+  async handler(ctx: Context<CreateParams>): Promise<Account> {
     // eslint-disable-next-line no-console
     console.log(ctx.params);
 
-    return true;
+    return true as Account;
   },
 };
