@@ -1,0 +1,29 @@
+version: "3"
+services:
+  redis:
+    image: redis
+    command: ["redis-server", "--appendonly", "yes"]
+    hostname: redis
+    ports:
+      - 6379:6379
+  mongo:
+    image: mongo
+    hostname: mongo
+    ports:
+      - '27017-27019:27017-27019'
+  app:
+    build: .
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true
+    depends_on:
+      - redis
+      - mongo
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - MONGO_URI=mongodb://mongo:27017/data
+      - WAIT_HOSTS=mongo:27017,redis:6379

@@ -1,0 +1,8 @@
+version: "3"
+services:
+  app:
+    environment:
+      - NODE_ENV=test
+      - LOGGER=error
+      - MONGO_URI=mongodb://mongo:27017/data-test
+    command: bash -c "/wait && npm run test:ci"
