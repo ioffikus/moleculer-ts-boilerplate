@@ -54,7 +54,7 @@
     "moleculer-db-adapter-mongoose": "^0.8.3",
     "moleculer-decorators": "^1.1.1",
     "moleculer-prometheus": "0.2.4",
-    "nanoid": "2.1.8",
+    "nanoid": "3.1.31",
     "pino": "5.15.0",
     "pump": "^3.0.0",
     "reflect-metadata": "^0.1.13",
