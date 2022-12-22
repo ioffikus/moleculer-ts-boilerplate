@@ -41,7 +41,7 @@
     "fast-xml-parser": "^3.15.1",
     "got": "^10.2.1",
     "ioredis": "^4.14.1",
-    "jsonwebtoken": "8.5.1",
+    "jsonwebtoken": "9.0.0",
     "jwt-decode": "2.2.0",
     "lodash": "4.17.21",
     "luxon": "^1.21.3",
